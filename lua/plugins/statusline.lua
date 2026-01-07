@@ -4,7 +4,16 @@ return {
     config = function()
         require('lualine').setup {
             options = {
-                theme = "gruvbox"
+                theme = 'gruvbox',
+            },
+            winbar = {
+                lualine_b = {
+                    {
+                        'filename',
+                        path = 1,
+                    },
+                },
+                lualine_c = { 'filetype', 'lsp_status' }
             }
         }
     end
