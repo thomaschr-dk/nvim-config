@@ -1,12 +1,9 @@
 require("config.lazy")
 
--- {{{ Commands
-vim.cmd [[set completeopt+=menuone,noselect,popup]]
-vim.cmd [[set clipboard+=unnamedplus]]
-vim.cmd [[set shiftwidth=4]]
--- }}}
-
 --- {{{ Options
+vim.opt.completeopt = "menuone,noselect,popup"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.tabstop = 4
 vim.opt.relativenumber = true
 vim.opt.foldmethod = "marker"
 --- }}}
