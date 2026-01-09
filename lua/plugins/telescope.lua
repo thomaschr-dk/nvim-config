@@ -4,7 +4,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } },
     config = function()
         require('telescope').setup {
-            defaults = require('telescope.themes').get_ivy(),
+            defaults = require('telescope.themes').get_dropdown(),
             extensions = {
                 fzf = {}
             }
@@ -20,6 +20,12 @@ return {
         vim.keymap.set('n', '<leader>fg',
             function() require('telescope.builtin').live_grep() end,
             { noremap = true, desc = "Grep files" })
+        vim.keymap.set('n', '<leader>fc',
+            function() require('telescope.builtin').git_status() end,
+            { noremap = true, desc = "Find modified files (git)" })
+        vim.keymap.set('n', '<leader>fp',
+            function() require('telescope.builtin').resume() end,
+            { noremap = true, desc = "Resume previous picker" })
         vim.keymap.set('n', '<leader>fh',
             function() require('telescope.builtin').help_tags() end, { noremap = true, desc = "Search help tags" })
         vim.keymap.set('n', '<leader>fn', function()
