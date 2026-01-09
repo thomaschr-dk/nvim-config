@@ -24,6 +24,7 @@ return {
                 "lua",
                 "vim",
                 "dockerfile",
+                "http"
             })
             vim.treesitter.language.register('markdown', 'octo')
         end
