@@ -6,6 +6,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
 vim.opt.foldmethod = "marker"
+vim.opt.winborder = "rounded"
+vim.opt.autoindent = true
+vim.cmd("filetype plugin indent on")
 --- }}}
 
 --- {{{ Globals
